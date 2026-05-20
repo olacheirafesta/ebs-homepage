@@ -167,6 +167,25 @@ blockquote em,
 
 /* WINNERS */
 .winners-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:72px}
+.winners-list{display:flex;flex-direction:column;gap:96px;margin-top:80px}
+.winner-block{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center}
+.winner-block.reverse .winner-content{order:2}
+.winner-h{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.6vw,48px);line-height:1.08;letter-spacing:-.02em;margin-bottom:24px}
+.winner-content blockquote{font-family:"Playfair Display",Georgia,serif!important;font-style:italic!important;font-weight:400;font-size:clamp(17px,1.6vw,20px);line-height:1.45;margin-bottom:32px;max-width:50ch}
+.who-tag{display:flex;align-items:center;gap:16px;padding-top:20px;border-top:1px solid var(--line)}
+.who-tag .avatar{width:60px;height:60px;border-radius:50%;overflow:hidden;flex-shrink:0;border:1px solid var(--line)}
+.who-tag .avatar img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.who-tag .name{font-family:var(--serif);font-weight:500;font-size:20px;line-height:1.1;margin-bottom:2px}
+.who-tag .role{display:block;font-family:var(--sans);font-weight:600;font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--neutral)}
+.who-tag .handle{display:flex;align-items:center;gap:4px;font-family:var(--sans);font-weight:500;font-size:12px;color:#444;margin-top:4px}
+.who-tag .handle .verified{width:12px;height:12px}
+.winner-print{aspect-ratio:auto;display:flex;align-items:center;justify-content:center}
+.winner-print img{max-width:100%;max-height:520px;width:auto;height:auto;display:block;border:1px solid var(--line);background:#fff}
+@media (max-width:900px){
+  .winners-list{gap:64px;margin-top:48px}
+  .winner-block{grid-template-columns:1fr;gap:32px}
+  .winner-block.reverse .winner-content{order:0}
+}
 .prints-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px 24px;margin-top:72px;align-items:start}
 .print img{width:100%;height:auto;display:block}
 @media (max-width:900px){.prints-grid{grid-template-columns:1fr;gap:24px}}
@@ -434,22 +453,88 @@ footer{border-top:1px solid var(--line);padding:48px var(--pad);text-align:cente
       <p class="lede fade" style="margin:24px auto 0;font-size:17px">Trabalhamos <em>exclusivamente</em> com empresárias do setor dos eventos que querem tornar-se a <em>referência nº1</em> na sua área e criar um negócio que serve a <em>vida que querem viver</em>.</p>
     </div>
 
-    <div class="winners-grid">
-      <div class="winner fade">
-        <div class="who"><div class="avatar"><img src="assets/Leticia.png" alt=""></div><div><div class="name">Letícia</div><span class="role">Wedding Planner</span></div></div>
-        <blockquote>"Passei de eventos de 500€ para eventos de <strong>3.000€</strong> sem mudar o tipo de eventos que faço. Comecei a preencher a minha agenda com <strong>2 anos de antecedência</strong>, e nunca achei que isso fosse possível."</blockquote>
-        <div class="metric">3.000€<small>Por evento · 2 anos de reservas</small></div>
-      </div>
-      <div class="winner fade">
-        <div class="who"><div class="avatar"><img src="assets/Susana.png" alt=""></div><div><div class="name">Susana</div><span class="role">Catering</span></div></div>
-        <blockquote>"Perdi o emprego numa fábrica e construí o meu negócio do zero. Hoje tenho a <strong>agenda cheia</strong>, já <strong>rejeitei clientes</strong>, já tenho eventos para o próximo ano e já fiz um evento para <strong>mais de mil pessoas</strong>."</blockquote>
-        <div class="metric">1.000+<small>Pessoas por evento</small></div>
-      </div>
-      <div class="winner fade">
-        <div class="who"><div class="avatar"><img src="assets/Isabel.png" alt=""></div><div><div class="name">Isabel</div><span class="role">Espaço de Eventos</span></div></div>
-        <blockquote>"Depois de entrar na EBS, fiz o primeiro evento com um cliente de <strong>valor 10× superior</strong>. No mês seguinte, com a uma única estratégia™ aplicada ao meu espaço, <strong>enchi a agenda</strong>."</blockquote>
-        <div class="metric">10×<small>Valor do cliente</small></div>
-      </div>
+    <div class="winners-list">
+
+      <article class="winner-block fade">
+        <div class="winner-content">
+          <h3 class="winner-h">Agenda preenchida com <em>2 anos de antecedência</em></h3>
+          <blockquote>"Passei de eventos de 500€ para eventos de <strong>3.000€</strong> sem mudar o tipo de eventos que faço. Comecei a preencher a minha agenda com <strong>2 anos de antecedência</strong>, e nunca achei que isso fosse possível."</blockquote>
+          <div class="who-tag">
+            <div class="avatar"><img src="assets/Leticia.png" alt=""></div>
+            <div>
+              <div class="name">Letícia</div>
+              <span class="role">Wedding Planner</span>
+              <span class="handle">@somosinstantes<svg class="verified" viewBox="0 0 24 24" fill="#3897F0"><path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81S3.48 7.27 3.94 8.66C2.63 9.32 1.75 10.57 1.75 12s.88 2.68 2.19 3.34c-.46 1.39-.2 2.9.81 3.91s2.52 1.26 3.91.81c.66 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.66 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="winner-print"><img src="assets/print-leticia.png" alt=""></div>
+      </article>
+
+      <article class="winner-block reverse fade">
+        <div class="winner-content">
+          <h3 class="winner-h">+1.000 pessoas <em>por evento</em></h3>
+          <blockquote>"Perdi o emprego numa fábrica e construí o meu negócio do zero. Hoje tenho a <strong>agenda cheia</strong>, já <strong>rejeitei clientes</strong>, já tenho eventos para o próximo ano e já fiz um evento para <strong>mais de mil pessoas</strong>."</blockquote>
+          <div class="who-tag">
+            <div class="avatar"><img src="assets/Susana.png" alt=""></div>
+            <div>
+              <div class="name">Susana</div>
+              <span class="role">Negócio de Catering</span>
+              <span class="handle">@amorafesta<svg class="verified" viewBox="0 0 24 24" fill="#3897F0"><path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81S3.48 7.27 3.94 8.66C2.63 9.32 1.75 10.57 1.75 12s.88 2.68 2.19 3.34c-.46 1.39-.2 2.9.81 3.91s2.52 1.26 3.91.81c.66 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.66 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="winner-print"><img src="assets/print-susana.png" alt=""></div>
+      </article>
+
+      <article class="winner-block fade">
+        <div class="winner-content">
+          <h3 class="winner-h">Cliente de valor <em>10× superior</em></h3>
+          <blockquote>"Depois de entrar na EBS, fiz o primeiro evento com um cliente de <strong>valor 10× superior</strong>. No mês seguinte, com a uma única estratégia™ aplicada ao meu espaço, <strong>enchi a agenda</strong>."</blockquote>
+          <div class="who-tag">
+            <div class="avatar"><img src="assets/Isabel.png" alt=""></div>
+            <div>
+              <div class="name">Isabel</div>
+              <span class="role">Espaço de Eventos</span>
+              <span class="handle">@seafoz<svg class="verified" viewBox="0 0 24 24" fill="#3897F0"><path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81S3.48 7.27 3.94 8.66C2.63 9.32 1.75 10.57 1.75 12s.88 2.68 2.19 3.34c-.46 1.39-.2 2.9.81 3.91s2.52 1.26 3.91.81c.66 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.66 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="winner-print"><img src="assets/print-isabel.png" alt=""></div>
+      </article>
+
+      <article class="winner-block reverse fade">
+        <div class="winner-content">
+          <h3 class="winner-h">Primeiro cliente em <em>3 meses</em></h3>
+          <blockquote>"Vivo no Porto. <strong>3 meses</strong> depois de entrar na EBS, tive o meu <strong>primeiro cliente</strong>."</blockquote>
+          <div class="who-tag">
+            <div class="avatar"><img src="assets/Raquel.png" alt=""></div>
+            <div>
+              <div class="name">Raquel</div>
+              <span class="role">Organização de Eventos · Porto</span>
+              <span class="handle">@irisiaevents<svg class="verified" viewBox="0 0 24 24" fill="#3897F0"><path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81S3.48 7.27 3.94 8.66C2.63 9.32 1.75 10.57 1.75 12s.88 2.68 2.19 3.34c-.46 1.39-.2 2.9.81 3.91s2.52 1.26 3.91.81c.66 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.66 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="winner-print"><img src="assets/print-raquel.png" alt=""></div>
+      </article>
+
+      <article class="winner-block fade">
+        <div class="winner-content">
+          <h3 class="winner-h">Primeiro evento de <em>20.000€</em></h3>
+          <blockquote>"Despedi-me em janeiro. Em setembro estava a entregar um evento de <strong>20.000€</strong>."</blockquote>
+          <div class="who-tag">
+            <div class="avatar"><img src="assets/Clara.jpg" alt=""></div>
+            <div>
+              <div class="name">Clara</div>
+              <span class="role">Organizadora de Eventos</span>
+              <span class="handle">@claraebentes<svg class="verified" viewBox="0 0 24 24" fill="#3897F0"><path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81S3.48 7.27 3.94 8.66C2.63 9.32 1.75 10.57 1.75 12s.88 2.68 2.19 3.34c-.46 1.39-.2 2.9.81 3.91s2.52 1.26 3.91.81c.66 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.66 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="winner-print"><img src="assets/print-clara.png" alt=""></div>
+      </article>
+
     </div>
   </div>
 </section>
